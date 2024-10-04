@@ -1,0 +1,28 @@
+<!-- search.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Search</title>
+</head>
+<body>
+    <h1>Student Search</h1>
+    <form method="get" action="{% url 'student_search' %}">
+        <label for="student_id">Student ID:</label>
+        <input type="text" id="student_id" name="student_id">
+        <button type="submit">Search</button>
+    </form>
+
+    
+    {% if students %}
+        <h2>Search Results:</h2>
+        <ul>
+            {% for student in students %}
+                <li>{{ student.roll }}: {{ student.first_name }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

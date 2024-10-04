@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>login</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: url(library.png) no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 100%;
+            }
+            .c2{
+                margin-left: 60%;
+            }
+            .c3{
+                margin-left: 50%;
+            }
+            
+            #log{
+                background-color: transparent;
+                position:relative;
+                margin-left: 30%;
+                width: 400px;
+                height: 440px;
+                border:2px solid rgb(148, 149, 231);
+                border-radius: 20px;
+                backdrop-filter: blur(20px);
+                align-items: center;
+            }
+            .log2{
+                margin-left: 30%;
+            }
+            .header{
+                padding-top: 2%;
+                font-size:large;
+                height: 40px;
+                width: 100%;
+                background-color: cyan;
+                
+            }
+            .label{
+                height: 20px;  
+            }
+            .submit{
+                margin-left: 20%;
+            }
+            .a{
+                float: right;
+                padding-right: 5%;
+            }
+            
+        </style>
+    </head>
+    <body>
+            <header class="header">
+                <a>Library management system</a>
+                <a class="a" href="" class="register">Register<a>   
+            </header>
+        <br>
+        
+        <form >
+            <div  id="log">
+                <h2 align="center">login</h2>
+
+            <br><br><br>
+            <div class="log2">
+                
+                <input id="uname" class="label" type="text" name="uname" placeholder="Username">
+                <br> <br>
+                
+                <input id="pass" class="label" type="password" name="pass" placeholder="Password">
+                <br> <br>   
+                <button  class="submit" onclick="f()">Submit</button> 
+                <br><br><br>
+                <u class="c2">forgot password</u>
+        </div>
+                
+            </div>
+        </form>
+         
+         <br>
+         
+    <script>
+        
+        function f(){
+            var pass=document.getElementById("pass").value;
+            var uname=document.getElementById("uname").value;
+            document.write("password is: "+pass+"<br>"+"username is: "+uname);    
+        }
+        
+    </script>
+    
+    </body>
+</html>

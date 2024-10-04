@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>page</title>
+    </head>
+    <body>
+        {{ name }}
+        <br>
+        {% for id in results%}
+            {{id.first_name}}---{{id.session}}
+            <br>
+        {%endfor%}
+    </body>
+</html>
